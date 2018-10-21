@@ -1,12 +1,20 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-import Main from "./components/Home/Home";
+import style from "./index.css";
+
+import Navbar from "./components/Navbar/Navbar";
+import Home from "./components/Home/Home";
 
 class Index extends React.Component {
   render() {
     return (
-      <Main />
+      <div className="app">
+        <Navbar />
+        <main style={{marginTop: '48px'}}>
+          <Home />
+        </main>
+      </div>
     )
   }
 }

@@ -1,0 +1,39 @@
+.toolbar {
+  position: fixed;
+  width: 100%;
+  height: 48px;
+  top: 0;
+  left: 0;
+  font-family: Helvetica, sans-serif;
+  font-size: 25px;
+}
+
+.toolbar-navigation {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  padding: 1rem;
+}
+
+.spacer {
+  flex: 1;
+}
+
+.toolbar-nav-items ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+.toolbar-nav-items li {
+  padding: 0 1rem;
+}
+.toolbar-nav-items a {
+  color: salmon;
+  text-decoration: none;
+}
+.toolbar-nav-items a:hover,
+.toolbar-nav-items a:active {
+  color: rgba(0, 0, 0, 0.7);
+  text-decoration: none;
+}
