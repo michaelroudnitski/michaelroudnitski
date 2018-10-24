@@ -11,7 +11,7 @@ class Index extends React.Component {
     return (
       <div className="app">
         <Navbar />
-        <main style={{marginTop: '48px'}}>
+        <main>
           <Home />
         </main>
       </div>

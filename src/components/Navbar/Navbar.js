@@ -1,6 +1,6 @@
 import React from "react";
 import style from "./Navbar.css";
-import DrawerToggleButton from "../SideDrawer/DrawerToggleButton";
+import { DrawerToggleButton } from "../SideDrawer/DrawerToggleButton";
 
 export default class Navbar extends React.Component {
   render() {
@@ -8,14 +8,13 @@ export default class Navbar extends React.Component {
       <header className="toolbar">
         <nav className="toolbar-navigation">
           <div>
-            <DrawerToggleButton />
+            <DrawerToggleButton id="drawer-toggle-btn" />
           </div>
-          {/* <div className="toolbar-logo"><a href="/">LOGO</a></div> */}
           <div className="spacer"></div>
           <div className="toolbar-nav-items">
             <ul>
-              <li><a href="/">projects</a></li>
-              <li><a href="/">contact</a></li>
+              <li><a href="/">PROJECTS</a></li>
+              <li><a href="/">CONTACT</a></li>
             </ul>
           </div>
         </nav>
