@@ -7,22 +7,24 @@ export default class Home extends React.Component {
   render() {
     return (
       <div>
-        <div className="name-container">
-          <Fade left>
-            <h1 className="name-title">MICHAEL<br />ROUDNITSKI</h1>
-          </Fade>
-        </div>
-        <Fade>
-          <div className="content-box box-1">
+        <section className="content-box box-1">
+          <div id="name-container">
+            <Fade right cascade>
+              <div>
+                <h1 className="pre-name">hi, my name is:</h1>
+                <h1 className="name-title">>Michael Roudnitski</h1>
+                <p className="name-subtitle">I like to build things</p>
+              </div>
+            </Fade>
           </div>
+        </section>
+        <Fade>
+          <section className="content-box box-2">
+          </section>
         </Fade>
         <Fade>
-          <div className="content-box box-2">
-          </div>
-        </Fade>
-        <Fade>
-          <div className="content-box box-3">
-          </div>
+          <section className="content-box box-3">
+          </section>
         </Fade>
       </div>
     )

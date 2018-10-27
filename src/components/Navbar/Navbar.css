@@ -8,12 +8,11 @@
   height: 64px;
   font-family: Helvetica, sans-serif;
   font-size: 25px;
-  margin: 1rem;
 }
-
 .toolbar-navigation {
   display: flex;
   height: 100%;
+  padding: 1rem;
   align-items: center;
 }
 
