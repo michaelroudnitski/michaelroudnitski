@@ -1,8 +1,7 @@
 import React from "react";
 import Fade from "react-reveal/Fade";
+import Train from "../Train/Train";
 import style from "./Home.css";
-
-import skylineImg from "../../../img/skyline.jpg";
 export default class Home extends React.Component {
   render() {
     return (
@@ -13,6 +12,7 @@ export default class Home extends React.Component {
               <div>
                 <h1 className="pre-name">hi, my name is:</h1>
                 <h1 className="name-title">>Michael Roudnitski</h1>
+                <Train />
                 <p className="name-subtitle">I like to build things</p>
               </div>
             </Fade>

@@ -1,0 +1,27 @@
+.train-track {
+  position: absolute;
+  left: 0;
+  background-color: white;
+  width: 100%;
+  height: 2%;
+}
+
+.train {
+  position: absolute;
+  background-color: salmon;
+  width: 35px;
+  height: 2%;
+  border-radius: 15%;
+  left: 0;
+  animation: 10s infinite alternate train;
+}
+
+@keyframes train {
+  from {
+    left: 0;
+  }
+  
+  to {
+    left: 100%;
+  }
+}
