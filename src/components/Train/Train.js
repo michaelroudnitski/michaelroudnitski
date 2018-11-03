@@ -1,5 +1,5 @@
 import React from "react";
-import style from "./Train.css";
+import style from "./Train.scss";
 
 export default class Home extends React.Component {
   render() {

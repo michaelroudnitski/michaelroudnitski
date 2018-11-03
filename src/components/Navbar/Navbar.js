@@ -1,22 +1,25 @@
 import React from "react";
-import style from "./Navbar.css";
-import { DrawerToggleButton } from "../SideDrawer/DrawerToggleButton";
+import style from "./Navbar.scss";
 
 export default class Navbar extends React.Component {
   render() {
     return (
       <header className="toolbar">
         <nav className="toolbar-navigation">
-          <div>
-            <DrawerToggleButton id="drawer-toggle-btn" />
-          </div>
+          <ul className="nav justify-content-end">
+            <li className="nav-item">
+              <a className="nav-link active" href="#">Home</a>
+            </li>
+          </ul>
           <div className="spacer"></div>
-          <div className="toolbar-nav-items">
-            <ul>
-              <li><a href="/">PROJECTS</a></li>
-              <li><a href="/">CONTACT</a></li>
-            </ul>
-          </div>
+          <ul className="nav justify-content-end">
+            <li className="nav-item">
+              <a className="nav-link" href="#">Projects</a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="#">Contact</a>
+            </li>
+          </ul>
         </nav>
       </header>
     )

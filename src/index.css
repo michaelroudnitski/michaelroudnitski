@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
+@import url('https://fonts.googleapis.com/css?family=Comfortaa');
 
 p, h1, h2, h3, h4, h5, h6 {
-  font-family: Arial, Helvetica, sans-serif;
-  color: rgba(0, 0, 0, 0.8);
+  font-family: 'Comfortaa', Arial, Helvetica, sans-serif;
+  color: rgba(0, 0, 0, 0.7);
 }
 
 body {
