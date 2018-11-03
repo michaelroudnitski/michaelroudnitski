@@ -3,6 +3,7 @@ import Fade from "react-reveal/Fade";
 import Typist from 'react-typist';
 import Train from "../Train/Train";
 import style from "./Home.scss";
+
 export default class Home extends React.Component {
   render() {
     return (
