@@ -6,6 +6,10 @@ import style from "./Home.scss";
 import coder from "../../../img/coder.svg";
 import { BrowserRouter as Router, Link } from 'react-router-dom';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
+
 export default class Home extends React.Component {
   render() {
     return (
@@ -24,9 +28,9 @@ export default class Home extends React.Component {
                 </h1>
                 <div className="content-container">
                   {/* <p className="name-subtitle">I like to build things, like this website which is still under construction</p> */}
-                  <a>Github</a>
-                  <a>LinkedIn</a>
-                  <a>Email</a>
+                  <a href="https://github.com/michaelroudnitski"><FontAwesomeIcon icon={faGithub} /></a>
+                  <a href="https://www.linkedin.com/in/michael-roudnitski/"><FontAwesomeIcon icon={faLinkedin} /></a>
+                  <a href="mailto:michaelroudnitski@gmail.com"><FontAwesomeIcon icon={faEnvelope} /></a>
                 </div>
               </div>
             </div>
