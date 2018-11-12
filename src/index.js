@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-import style from "./index.css";
+import style from "./index.scss";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import Navbar from "./components/Navbar/Navbar";
@@ -16,7 +16,7 @@ class Index extends React.Component {
     return (
       <Router>
         <div className="app">
-          <Navbar />
+          {/* <Navbar /> */}
           <main>
             <Route exact path="/" component={Home} />
             <Route path="/home" component={Home} />

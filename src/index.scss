@@ -10,3 +10,10 @@ body {
   overflow-x: hidden;
   margin: 0;
 }
+
+a {
+  color: salmon;
+  &:hover {
+    color: rgb(250, 160, 130);
+  }
+}
