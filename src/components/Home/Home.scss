@@ -14,9 +14,9 @@ $breakpoint-mobile: 480px;
 }
 
 #name-container {
-  padding-top: 5vh;
-  padding-left: 5vw;
-  padding-right: 15px;
+  // padding-top: 5vh;
+  // padding-left: 5vw;
+  // padding-right: 15px;
 }
 
 .pre-name {
@@ -46,6 +46,9 @@ $breakpoint-mobile: 480px;
 }
 
 .box-1 {
+  padding-top: 5vh;
+  padding-left: 5vw;
+  padding-right: 15px;
   height: 100%;
 }
 
@@ -96,7 +99,7 @@ $breakpoint-mobile: 480px;
     border: 5px $secondary-color solid;
   }
   position: absolute;
-  top: 40%;
+  top: 50%;
 }
 
 a {
@@ -144,6 +147,7 @@ a {
   }
 }
 
+// viewing in large device
 @media (min-width: $breakpoint-mobile) {
   .box-1 {
     background: url("../../../img/mountains.jpg");
@@ -160,9 +164,23 @@ a {
   }
 }
 
+// viewing in mobile
 @media (max-width: $breakpoint-mobile) {
   .pre-name {
     font-size: 26pt;
+  }
+
+  #projects-button {
+    background: $primary-color;
+    border: none;
+    margin: 45% auto;
+    border-width: 3px;
+    display: block;
+    position: relative;
+    h1 {
+      color: $secondary-color;
+      font-size: 2rem;
+    }
   }
 
   .container-fluid {

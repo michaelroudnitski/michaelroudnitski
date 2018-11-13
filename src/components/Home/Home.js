@@ -27,26 +27,24 @@ export default class Home extends React.Component {
     return (
       <div className="container-fluid">
         <div className="row no-margin full-height">
-          <div className="box-1 col-lg-9 no-padding">
+          <div className="box-1 col-lg-9">
             <div id="name-container">
-              <div>
-                <h1 className="pre-name">Hi, my name is</h1>
-                <h1 className="name-title">
-                  <Typist startDelay={1000} cursor={{ show: false }} >
-                    <span>Slim Shady</span>
-                    <Typist.Backspace count={10} delay={200} />
-                    <span>Michael Roudnitski</span>
-                  </Typist>
-                </h1>
-                <Link to="/projects">
-                  <button className="btn btn-primary" id="projects-button"><h1>Projects</h1></button>
-                </Link>
-                <div className="contact-icon-container">
-                  <a href="https://github.com/michaelroudnitski"><FontAwesomeIcon icon={faGithub} /></a>
-                  <a href="https://www.linkedin.com/in/michael-roudnitski/"><FontAwesomeIcon icon={faLinkedin} /></a>
-                  <a href="mailto:michaelroudnitski@gmail.com"><FontAwesomeIcon icon={faEnvelope} /></a>
-                </div>
-              </div>
+              <h1 className="pre-name">Hi, my name is</h1>
+              <h1 className="name-title">
+                <Typist startDelay={1000} cursor={{ show: false }} >
+                  <span>Slim Shady</span>
+                  <Typist.Backspace count={10} delay={200} />
+                  <span>Michael Roudnitski</span>
+                </Typist>
+              </h1>
+            </div>
+            <Link to="/projects">
+              <button className="btn btn-primary" id="projects-button"><h1>Projects</h1></button>
+            </Link>
+            <div className="contact-icon-container">
+              <a href="https://github.com/michaelroudnitski"><FontAwesomeIcon icon={faGithub} /></a>
+              <a href="https://www.linkedin.com/in/michael-roudnitski/"><FontAwesomeIcon icon={faLinkedin} /></a>
+              <a href="mailto:michaelroudnitski@gmail.com"><FontAwesomeIcon icon={faEnvelope} /></a>
             </div>
           </div>
           <section className="col no-padding">
