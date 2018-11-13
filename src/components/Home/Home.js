@@ -6,8 +6,6 @@ import style from "./Home.scss";
 import coder from "../../../img/coder.svg";
 import { BrowserRouter as Router, Link } from 'react-router-dom';
 
-import Particles from 'react-particles-js';
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
@@ -18,24 +16,6 @@ export default class Home extends React.Component {
       <div className="container-fluid">
         <div className="row no-margin full-height">
           <div className="box-1 col-lg-8 no-padding">
-            <Particles
-              params={{
-                particles: {
-                  line_linked: {
-                    shadow: {
-                      enable: true,
-                      color: "rgb(255, 87, 51)",
-                      blur: 10
-                    }
-                  }
-                }
-              }}
-              style={{
-                width: '100%',
-                zIndex: '-1',
-                position: 'absolute'
-              }}
-            />
             <div id="name-container">
               <div>
                 <h1 className="pre-name">Hi, my name is</h1>
@@ -57,7 +37,6 @@ export default class Home extends React.Component {
           <section className="col no-padding">
             <Fade top delay={300}>
               <div className="box box-2 col">
-                {/* <FontAwesomeIcon icon={faUser} className="faded-background-icon" /> */}
                 <Link to="/about">
                   <h1 className="row justify-content-center colored-link">About Me</h1>
                 </Link>
@@ -74,7 +53,6 @@ export default class Home extends React.Component {
             </Fade>
             <Fade bottom delay={300}>
               <div className="box box-3 col">
-                {/* <FontAwesomeIcon icon={faCode} className="faded-background-icon" /> */}
                 <Link to="/projects">
                   <h1 className="row justify-content-center colored-link">Projects</h1>
                 </Link>
