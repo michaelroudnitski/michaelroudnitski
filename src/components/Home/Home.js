@@ -3,7 +3,7 @@ import Fade from "react-reveal/Fade";
 import Typist from 'react-typist';
 import Train from "../Train/Train";
 import style from "./Home.scss";
-import coder from "../../../img/coder.svg";
+import mountains from "../../../img/mountains.jpg";
 import { BrowserRouter as Router, Link } from 'react-router-dom';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -15,7 +15,7 @@ export default class Home extends React.Component {
     return (
       <div className="container-fluid">
         <div className="row no-margin full-height">
-          <div className="box-1 col-lg-8 no-padding">
+          <div className="box-1 col-lg-9 no-padding">
             <div id="name-container">
               <div>
                 <h1 className="pre-name">Hi, my name is</h1>
@@ -35,26 +35,26 @@ export default class Home extends React.Component {
             </div>
           </div>
           <section className="col no-padding">
-            <Fade top delay={300}>
+            <Fade Fade>
               <div className="box box-2 col">
                 <Link to="/about">
-                  <h1 className="row justify-content-center colored-link">About Me</h1>
+                  <h1 className="row justify-content-center">About Me</h1>
                 </Link>
                 <br />
                 <p className="row justify-content-md-center">
-                  I'm in my 2nd year of Computer Science at York University in Toronto, Canada.
+                  I'm in my 2nd year of Computer Science at York University in Toronto, Canada and expect to graduate in 2021.
                 </p>
                 <p className="row justify-content-md-center inline">
                   When I'm not studying I'm building beautiful and easy to use web interfaces
                   as well as scalable back end cloud solutions for{' '}
-                  <a href="https://www.completelymanaged.com/" className="inline colored">Completely Managed</a>.
+                  <a href="https://www.completelymanaged.com/" className="inline">Completely Managed</a>.
                 </p>
               </div>
             </Fade>
-            <Fade bottom delay={300}>
+            <Fade>
               <div className="box box-3 col">
-                <Link to="/projects">
-                  <h1 className="row justify-content-center colored-link">Projects</h1>
+              <Link to="/projects">
+                  <h1 id="projects-button">Projects</h1>
                 </Link>
               </div>
             </Fade>
