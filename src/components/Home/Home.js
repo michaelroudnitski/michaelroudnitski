@@ -8,7 +8,7 @@ import { BrowserRouter as Router, Link } from 'react-router-dom';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
+import { faEnvelope, faCode, faUser } from '@fortawesome/free-solid-svg-icons'
 
 export default class Home extends React.Component {
   render() {
@@ -20,7 +20,7 @@ export default class Home extends React.Component {
               <div>
                 <h1 className="pre-name">Hi, my name is</h1>
                 <h1 className="name-title">
-                  <Typist startDelay={500} cursor={{ show: false }} >
+                  <Typist startDelay={1000} cursor={{ show: false }} >
                     <span>Slim Shady</span>
                     <Typist.Backspace count={10} delay={200} />
                     <span>Michael Roudnitski</span>
@@ -35,16 +35,17 @@ export default class Home extends React.Component {
             </div>
           </div>
           <section className="col no-padding">
-            <Fade right>
+            <Fade top>
               <div className="box box-2 col">
+                <FontAwesomeIcon icon={faUser} className="faded-background-icon" />
                 <Link to="/about">
-                  <h1 className="row justify-content-md-center">About Me</h1>
+                  <h1 className="row justify-content-center">About Me</h1>
                 </Link>
                 <br />
-                <p className="row justify-content-md-center">
+                <p className="row justify-content-center">
                   I'm in my 2nd year of Computer Science at York University in Toronto, Canada.
                 </p>
-                <p className="row justify-content-md-center inline">
+                <p className="row justify-content-center inline">
                   When I'm not studying I'm building beautiful and easy to use web interfaces
                   as well as scalable back end cloud solutions for{' '}
                   <a href="https://www.completelymanaged.com/" className="inline colored">Completely Managed</a>
@@ -52,10 +53,11 @@ export default class Home extends React.Component {
                 </p>
               </div>
             </Fade>
-            <Fade right>
+            <Fade bottom>
               <div className="box box-3 col">
+                <FontAwesomeIcon icon={faCode} className="faded-background-icon" />
                 <Link to="/projects">
-                  <h1 className="row justify-content-md-center">Projects</h1>
+                  <h1 className="row justify-content-center">Projects</h1>
                 </Link>
               </div>
             </Fade>
