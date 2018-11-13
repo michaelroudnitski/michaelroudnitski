@@ -20,14 +20,13 @@ export default class Home extends React.Component {
               <div>
                 <h1 className="pre-name">Hi, my name is</h1>
                 <h1 className="name-title">
-                  <Typist startDelay={500} cursor={{ hideWhenDone: true, hideWhenDoneDelay: 400 }} >
+                  <Typist startDelay={500} cursor={{ show: false }} >
                     <span>Slim Shady</span>
                     <Typist.Backspace count={10} delay={200} />
                     <span>Michael Roudnitski</span>
                   </Typist>
                 </h1>
-                <div className="content-container">
-                  {/* <p className="name-subtitle">I like to build things, like this website which is still under construction</p> */}
+                <div className="contact-icon-container">
                   <a href="https://github.com/michaelroudnitski"><FontAwesomeIcon icon={faGithub} /></a>
                   <a href="https://www.linkedin.com/in/michael-roudnitski/"><FontAwesomeIcon icon={faLinkedin} /></a>
                   <a href="mailto:michaelroudnitski@gmail.com"><FontAwesomeIcon icon={faEnvelope} /></a>

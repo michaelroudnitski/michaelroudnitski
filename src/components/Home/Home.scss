@@ -1,3 +1,8 @@
+$primary-color: rgb(255, 87, 51);
+$black: rgba(0,0,0,0.8);
+
+$breakpoint-mobile: 480px;
+
 .container-fluid {
   margin: 0;
   padding: 0;
@@ -15,13 +20,14 @@
 
 .pre-name {
   font-family: 'Comfortaa', Arial, Helvetica, sans-serif;
-  font-size: 5vw;
+  font-size: 46pt;
+  color: $black;
 }
 
 .name-title {
   font-family: 'Comfortaa', Arial, Helvetica, sans-serif;
-  color: salmon;
-  font-size: 6vw;
+  color: $primary-color;
+  font-size: 60pt;
   font-weight: 600;
   margin: 0;
   flex: 1;
@@ -38,21 +44,47 @@
 }
 
 .box-1 {
-  z-index: 200;
-  box-shadow: 5px 0px 10px rgba(0, 0, 0, 0.2);
+  z-index: 300;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
   height: 100%;
 }
 
 .box-2 {
-  background: salmon;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+  z-index: 200;
   height: 50%;
 }
 
 .box-3 {
-  background: azure;
   height: 50%;
+}
+
+a {
+  color: $black;
+  &:hover {
+    color: $primary-color;
+  }
 }
 
 .no-padding {
   padding: 0 !important;
+}
+
+.contact-icon-container {
+  position: absolute;
+  bottom: 3%;
+  a {
+    font-size: 25pt;
+    padding: 0 10px;
+  }
+}
+
+@media (max-width: $breakpoint-mobile) {
+  .pre-name {
+    font-size: 26pt;
+  }
+  
+  .name-title {
+    font-size: 40pt;
+  }
 }

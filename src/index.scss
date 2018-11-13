@@ -3,17 +3,9 @@
 
 p, h1, h2, h3, h4, h5, h6 {
   font-family: 'Comfortaa', Arial, Helvetica, sans-serif;
-  color: rgba(0, 0, 0, 0.7);
 }
 
 body {
   overflow-x: hidden;
   margin: 0;
-}
-
-a {
-  color: salmon;
-  &:hover {
-    color: rgb(250, 160, 130);
-  }
 }
