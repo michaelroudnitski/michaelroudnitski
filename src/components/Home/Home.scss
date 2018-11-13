@@ -90,6 +90,14 @@ a {
   }
 }
 
+.colored-link {
+  color: $primary-color;
+  transition: color 0.3s ease;
+  &:hover {
+    color: $black;
+  }
+}
+
 .contact-icon-container {
   position: absolute;
   bottom: 3%;
