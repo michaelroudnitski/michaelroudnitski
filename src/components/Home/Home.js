@@ -6,6 +6,8 @@ import style from "./Home.scss";
 import coder from "../../../img/coder.svg";
 import { BrowserRouter as Router, Link } from 'react-router-dom';
 
+import Particles from 'react-particles-js';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
@@ -16,6 +18,24 @@ export default class Home extends React.Component {
       <div className="container-fluid">
         <div className="row no-margin full-height">
           <div className="box-1 col-lg-8 no-padding">
+            <Particles
+              params={{
+                particles: {
+                  line_linked: {
+                    shadow: {
+                      enable: true,
+                      color: "rgb(255, 87, 51)",
+                      blur: 5
+                    }
+                  }
+                }
+              }}
+              style={{
+                width: '100%',
+                'z-index': '-1',
+                position: 'absolute'
+              }}
+            >Eat Ass</Particles>
             <div id="name-container">
               <div>
                 <h1 className="pre-name">Hi, my name is</h1>
@@ -35,7 +55,7 @@ export default class Home extends React.Component {
             </div>
           </div>
           <section className="col no-padding">
-            <Fade top>
+            <Fade top delay={300}>
               <div className="box box-2 col">
                 {/* <FontAwesomeIcon icon={faUser} className="faded-background-icon" /> */}
                 <Link to="/about">
@@ -53,7 +73,7 @@ export default class Home extends React.Component {
                 </p>
               </div>
             </Fade>
-            <Fade bottom>
+            <Fade bottom delay={300}>
               <div className="box box-3 col">
                 {/* <FontAwesomeIcon icon={faCode} className="faded-background-icon" /> */}
                 <Link to="/projects">
