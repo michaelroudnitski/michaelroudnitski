@@ -37,7 +37,7 @@ export default class Home extends React.Component {
           <section className="col no-padding">
             <Fade right>
               <div className="box box-2 col">
-                <Link to="/contact">
+                <Link to="/about">
                   <h1 className="row justify-content-md-center">About Me</h1>
                 </Link>
                 <br />
