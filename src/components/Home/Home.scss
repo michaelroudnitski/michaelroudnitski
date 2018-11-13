@@ -173,10 +173,12 @@ a {
   #projects-button {
     background: $primary-color;
     border: none;
-    margin: 45% auto;
-    border-width: 3px;
-    display: block;
-    position: relative;
+    position: absolute; 
+    left: 0; 
+    right: 0; 
+    margin-left: auto; 
+    margin-right: auto; 
+    width: 50%;
     h1 {
       color: $secondary-color;
       font-size: 2rem;

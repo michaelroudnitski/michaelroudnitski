@@ -48,7 +48,7 @@ export default class Home extends React.Component {
             </div>
           </div>
           <section className="col no-padding">
-            <Fade Fade>
+            <Fade>
               <div className="box box-2 col">
                 <Link to="/about">
                   <h1 className="row justify-content-center">About Me</h1>
@@ -63,8 +63,6 @@ export default class Home extends React.Component {
                   <a href="https://www.completelymanaged.com/" className="inline">Completely Managed</a>.
                 </p>
               </div>
-            </Fade>
-            <Fade>
               <div className="box box-3 col" onMouseLeave={() => this.highlightSkill("Skills")}>
                 <h1 className="row justify-content-center">{this.state.skill}</h1>
                 <div className="row align-items-center">
