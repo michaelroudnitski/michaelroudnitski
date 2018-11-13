@@ -8,7 +8,7 @@ import { BrowserRouter as Router, Link } from 'react-router-dom';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
-import { faEnvelope, faCode, faUser } from '@fortawesome/free-solid-svg-icons'
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 
 export default class Home extends React.Component {
   render() {
@@ -37,7 +37,7 @@ export default class Home extends React.Component {
           <section className="col no-padding">
             <Fade top>
               <div className="box box-2 col">
-                <FontAwesomeIcon icon={faUser} className="faded-background-icon" />
+                {/* <FontAwesomeIcon icon={faUser} className="faded-background-icon" /> */}
                 <Link to="/about">
                   <h1 className="row justify-content-center">About Me</h1>
                 </Link>
@@ -55,7 +55,7 @@ export default class Home extends React.Component {
             </Fade>
             <Fade bottom>
               <div className="box box-3 col">
-                <FontAwesomeIcon icon={faCode} className="faded-background-icon" />
+                {/* <FontAwesomeIcon icon={faCode} className="faded-background-icon" /> */}
                 <Link to="/projects">
                   <h1 className="row justify-content-center">Projects</h1>
                 </Link>

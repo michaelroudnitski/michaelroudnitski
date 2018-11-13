@@ -1,4 +1,5 @@
 $primary-color: rgb(255, 87, 51);
+
 $black: rgba(0,0,0,0.8);
 
 $breakpoint-mobile: 480px;
@@ -51,12 +52,35 @@ $breakpoint-mobile: 480px;
 .box-2 {
   box-shadow: -5px -5px 20px rgba(0, 0, 0, 0.1);
   z-index: 200;
+  &::after {
+    background: url("../../../img/user-regular.svg");
+    content: "";
+    opacity: 0.04;
+    top: 20px;
+    left: 20px;
+    bottom: 30%;
+    right: 30%;
+    position: absolute;
+    z-index: -1;
+    background-repeat: no-repeat;
+  }
 }
 
 .box-3 {
-  z-index: 300;
   box-shadow: -5px -5px 20px rgba(0, 0, 0, 0.1);
-  height: 50%;
+  z-index: 300;
+  &::after {
+    background: url("../../../img/code-solid.svg");
+    content: "";
+    opacity: 0.04;
+    top: 20px;
+    left: 20px;
+    bottom: 30%;
+    right: 30%;
+    position: absolute;
+    z-index: -1;
+    background-repeat: no-repeat;
+  }
 }
 
 a {
@@ -100,10 +124,21 @@ a {
   position: absolute;
   font-size: 100pt;
   text-align: right;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
+  z-index: 0;
 }
 
 @media (min-width: $breakpoint-mobile) {
   .box-2 {
+    height: 50%;
+  }
+
+  .box-3 {
     height: 50%;
   }
   
