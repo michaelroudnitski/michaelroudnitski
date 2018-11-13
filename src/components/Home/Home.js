@@ -14,7 +14,7 @@ export default class Home extends React.Component {
   render() {
     return (
       <div className="container-fluid">
-        <div className="row full-height">
+        <div className="row no-margin full-height">
           <div className="box-1 col-lg-8 no-padding">
             <div id="name-container">
               <div>
@@ -36,20 +36,32 @@ export default class Home extends React.Component {
           </div>
           <section className="col no-padding">
             <Fade right>
-              <div className="box box-2">
-                <Link to="/projects">
-                  <h1>Projects</h1>
+              <div className="box box-2 col">
+                <Link to="/contact">
+                  <h1 className="row justify-content-md-center">About Me</h1>
                 </Link>
+                <br />
+                <p className="row justify-content-md-center">
+                  I'm in my 2nd year of Computer Science at York University in Toronto, Canada.
+                </p>
+                <p className="row justify-content-md-center inline">
+                  When I'm not studying I'm building beautiful and easy to use web interfaces
+                  as well as scalable back end cloud solutions for{' '}
+                  <a href="https://www.completelymanaged.com/" className="inline colored">Completely Managed</a>
+                  {' '}as an intern.
+                </p>
               </div>
-              <div className="box box-3">
+            </Fade>
+            <Fade right>
+              <div className="box box-3 col">
                 <Link to="/projects">
-                  <h1>Contact</h1>
+                  <h1 className="row justify-content-md-center">Projects</h1>
                 </Link>
               </div>
             </Fade>
           </section>
         </div>
-      </div>
+      </div >
     )
   }
 }
