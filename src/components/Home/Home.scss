@@ -2,7 +2,7 @@ $primary-color: rgb(255, 87, 51);
 $secondary-color: wheat;
 $black: rgba(0,0,0,0.8);
 
-$breakpoint-mobile: 480px;
+$breakpoint-mobile: 768px;
 
 .container-fluid {
   margin: 0;
@@ -11,12 +11,6 @@ $breakpoint-mobile: 480px;
 
 .full-height {
   height: 100vh;
-}
-
-#name-container {
-  // padding-top: 5vh;
-  // padding-left: 5vw;
-  // padding-right: 15px;
 }
 
 .pre-name {
@@ -54,12 +48,12 @@ $breakpoint-mobile: 480px;
 
 .box-2 {
   box-shadow: -5px -5px 20px rgba(0, 0, 0, 0.1);
-  background: rgba(0, 0, 0, 0.92);
+  background: rgba(0, 0, 0, 0.9);
   z-index: 200;
   &::after {
     background: url("../../../img/user-regular.svg");
     content: "";
-    opacity: 0.04;
+    opacity: 0.08;
     top: 20px;
     left: 50%;
     bottom: 30%;
@@ -72,12 +66,12 @@ $breakpoint-mobile: 480px;
 
 .box-3 {
   box-shadow: -5px -5px 20px rgba(0, 0, 0, 0.1);
-  background: rgba(0, 0, 0, 0.96);
+  background: rgba(0, 0, 0, 0.92);
   z-index: 300;
   &::after {
     background: url("../../../img/code-solid.svg");
     content: "";
-    opacity: 0.04;
+    opacity: 0.15;
     top: 20px;
     left: 30%;
     bottom: 30%;
@@ -147,12 +141,16 @@ a {
   }
 }
 
-// viewing in large device
+// viewing on large device
 @media (min-width: $breakpoint-mobile) {
   .box-1 {
     background: url("../../../img/mountains.jpg");
     background-size: auto 100%;
     background-position: center;
+  }
+
+  .full-height {
+    overflow: hidden;
   }
 
   .box-2 {
@@ -164,7 +162,7 @@ a {
   }
 }
 
-// viewing in mobile
+// viewing on mobile
 @media (max-width: $breakpoint-mobile) {
   .pre-name {
     font-size: 26pt;

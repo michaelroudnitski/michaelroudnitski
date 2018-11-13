@@ -27,8 +27,8 @@ export default class Home extends React.Component {
     return (
       <div className="container-fluid">
         <div className="row no-margin full-height">
-          <div className="box-1 col-lg-9">
-            <div id="name-container">
+          <div className="box-1 col-lg-8">
+            <div>
               <h1 className="pre-name">Hi, my name is</h1>
               <h1 className="name-title">
                 <Typist startDelay={1000} cursor={{ show: false }} >
