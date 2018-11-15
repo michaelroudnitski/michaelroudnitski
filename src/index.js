@@ -7,7 +7,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Navbar from "./components/Navbar/Navbar";
 import Home from "./components/Home/Home";
 import Projects from "./components/Projects/Projects";
-import About from "./components/About/About";
 
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
@@ -21,7 +20,6 @@ class Index extends React.Component {
             <Route exact path="/" component={Home} />
             <Route path="/home" component={Home} />
             <Route path="/projects" component={Projects} />
-            <Route path="/about" component={About} />
           </main>
         </div>
       </Router>

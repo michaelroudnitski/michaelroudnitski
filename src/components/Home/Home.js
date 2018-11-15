@@ -1,7 +1,6 @@
 import React from "react";
 import Fade from "react-reveal/Fade";
 import Typist from 'react-typist';
-import Train from "../Train/Train";
 import style from "./Home.scss";
 import mountains from "../../../img/mountains.jpg";
 import { BrowserRouter as Router, Link } from 'react-router-dom';
@@ -50,9 +49,7 @@ export default class Home extends React.Component {
           <section className="col no-padding">
             <Fade>
               <div className="box box-2 col">
-                <Link to="/about">
-                  <h1 className="row justify-content-center">About Me</h1>
-                </Link>
+                <h1 className="row justify-content-center">About Me</h1>
                 <br />
                 <p className="row justify-content-md-center">
                   I'm in my 2nd year of Computer Science at York University in Toronto, Canada and expect to graduate in 2021.
