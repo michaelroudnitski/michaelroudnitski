@@ -14,7 +14,6 @@ export default class Home extends React.Component {
   constructor(props) {
     super(props);
     this.state = { skill: "Skills" };
-
     this.highlightSkill = this.highlightSkill.bind(this);
   }
 

@@ -86,10 +86,14 @@ $breakpoint-mobile: 768px;
   background: none;
   border: 5px $primary-color solid;
   display: inline-block;
-  color: $primary-color;
-  transition: color 0.3s ease;
+  h1 {
+    transition: color 0.3s ease;
+    color: $primary-color;
+  }
   &:hover {
-    color: $secondary-color;
+    h1 {
+      color: $secondary-color;
+    }
     border: 5px $secondary-color solid;
   }
   position: absolute;

@@ -1,0 +1,25 @@
+$primary-color: rgb(255, 87, 51);
+$secondary-color: wheat;
+$black: rgba(0,0,0,0.85);
+
+body {
+  background: $black;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  font-family: 'Comfortaa', Arial, Helvetica, sans-serif;
+  color: white;
+}
+
+.section-header {
+  margin-top: 20px;
+}
+
+.card-image {
+  max-height: 300px;
+  max-width: 100%;
+}
+
+.col-md-6 {
+  flex-wrap: nowrap;
+}
