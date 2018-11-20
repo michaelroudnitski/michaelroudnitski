@@ -7,6 +7,8 @@ import { faAndroid } from '@fortawesome/free-brands-svg-icons'
 
 import junojump from '../../../img/junojump/junojump.png';
 import summnews from '../../../img/summnews/summnews.png';
+import yuroomie from '../../../img/yuroomie/yuroomie.png';
+
 
 export default () => (
   <div className="container">
@@ -54,7 +56,7 @@ export default () => (
                 </p>
             </div>
             <div className="col-md-6">
-            <a href="https://github.com/AdamZed/SummNews"><img className="card-image" src={summnews} /></a>
+              <a href="https://github.com/AdamZed/SummNews"><img className="card-image" src={summnews} /></a>
             </div>
           </div>
         </div>
@@ -65,6 +67,16 @@ export default () => (
             <a href="https://github.com/michaelroudnitski/yuroomie">YURoomie (2018)</a></h3>
         </div>
         <div className="card-body">
+          <div className="row">
+            <div className="col-md-6">
+              <p className="card-text">YURoomie is a web platform built with Django.</p>
+              <p className="card-text">It was designed to help university students find roommates studying at the same school.</p>
+              <p className="card-text">The project was completed for <a href="http://hackfest.library.yorku.ca/2018/">Steacie Library Hackfest</a> hosted by York University.</p>
+            </div>
+            <div className="col-md-6">
+              <a href="https://github.com/michaelroudnitski/yuroomie"><img className="card-image" src={yuroomie} /></a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
