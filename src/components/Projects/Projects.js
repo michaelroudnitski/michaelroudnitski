@@ -27,8 +27,8 @@ export default () => (
     <div className="container">
       <h1 className="section-header">Featured Projects</h1>
       <div className="col">
-        <Fade bottom>
-          <div className="card text-white bg-dark mb-3">
+        <Fade top>
+          <div className="card bg-dark mb-3">
             <div className="card-header">
               <h3 className="card-title">
                 <a href="https://play.google.com/store/apps/details?id=com.MichaelRoudnitski.Slider&hl=en">Juno Jump (2017)</a>
@@ -52,8 +52,8 @@ export default () => (
             </div>
           </div>
         </Fade>
-        <Fade bottom>
-          <div className="card text-white bg-dark mb-3">
+        <Fade top>
+          <div className="card bg-dark mb-3">
             <div className="card-header">
               <h3 className="card-title"><a href="https://github.com/AdamZed/SummNews">SummNews (2018)</a></h3>
             </div>
@@ -79,8 +79,8 @@ export default () => (
             </div>
           </div>
         </Fade>
-        <Fade bottom>
-          <div className="card text-white bg-dark mb-3">
+        <Fade top>
+          <div className="card bg-dark mb-3">
             <div className="card-header">
               <h3 className="card-title">
                 <a href="https://github.com/michaelroudnitski/yuroomie">YURoomie (2018)</a></h3>
