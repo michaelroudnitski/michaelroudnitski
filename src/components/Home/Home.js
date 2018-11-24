@@ -2,7 +2,6 @@ import React from "react";
 import Fade from "react-reveal/Fade";
 import Typist from 'react-typist';
 import style from "./Home.scss";
-import mountains from "../../../img/mountains.jpg";
 import { BrowserRouter as Router, Link } from 'react-router-dom';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -18,7 +17,7 @@ export default class Home extends React.Component {
   }
 
   highlightSkill(skill) {
-    this.setState(state => ({ skill }))
+    this.setState(state => ({ skill }));
   }
 
   render() {

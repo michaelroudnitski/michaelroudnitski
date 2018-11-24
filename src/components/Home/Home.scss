@@ -36,7 +36,7 @@ $breakpoint-mobile: 768px;
 
 .box {
   padding: 50px;
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 0.9);
 }
 
 .box-1 {
@@ -148,7 +148,7 @@ a {
 // viewing on large device
 @media (min-width: $breakpoint-mobile) {
   .box-1 {
-    background: url("../../../img/mountains.jpg");
+    background: url("../../../img/city.jpg");
     background-size: auto 100%;
     background-position: center;
   }
@@ -188,7 +188,7 @@ a {
   }
 
   .container-fluid {
-    background: url("../../../img/mountains.jpg");
+    background: url("../../../img/city.jpg");
     background-size: auto 100%;
     background-position: center;
   }
