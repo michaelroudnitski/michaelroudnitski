@@ -26,8 +26,7 @@ const SUMMNEWSIMAGES = [
 ]
 
 const YUROOMIEIMAGES = [
-  '../../../img/yuroomie/yuroomie.png',
-  '../../../img/yuroomie/yuroomie1.png'
+  '../../../img/yuroomie/yuroomie.jpg'
 ]
 
 export default class Projects extends React.Component {
