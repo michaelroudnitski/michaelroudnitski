@@ -19,18 +19,31 @@ const JUNOJUMPIMAGES = [
   '../../../img/junojump/junojump3.png'
 ]
 
+const SUMMNEWSIMAGES = [
+  '../../../img/summnews/summnews.png',
+  '../../../img/summnews/summnews1.png',
+  '../../../img/summnews/summnews2.png'
+]
+
+const YUROOMIEIMAGES = [
+  '../../../img/yuroomie/yuroomie.png',
+  '../../../img/yuroomie/yuroomie1.png'
+]
+
 export default class Projects extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      scaleimage: false
+      scaleimage: false,
+      galleryImages: null
     }
     this.toggleScaleImage = this.toggleScaleImage.bind(this);
     this.escapePress = this.escapePress.bind(this);
   }
 
-  toggleScaleImage() {
+  toggleScaleImage(images=null) {
     this.setState(state => ({
+      galleryImages: images ? images : null,
       scaleimage: !state.scaleimage
     }));
   }
@@ -54,7 +67,7 @@ export default class Projects extends React.Component {
     return (
       <div>
         {this.state.scaleimage && <FontAwesomeIcon icon={faTimes} className="close-button" onClick={this.toggleScaleImage} />}
-        {this.state.scaleimage && <ScaleImage images={JUNOJUMPIMAGES} />}
+        {this.state.scaleimage && <ScaleImage images={this.state.galleryImages} />}
         <nav className="nav-bar">
           <div className="nav-content row justify-content-between">
             <Link to="/home"><h3 id="home-button">Home</h3></Link>
@@ -88,7 +101,7 @@ export default class Projects extends React.Component {
                     </div>
                     <Fade right>
                       <div className="col-md-6">
-                        <img className="card-image" src={junojump} onClick={this.toggleScaleImage} />
+                        <img className="card-image" src={junojump} onClick={() => this.toggleScaleImage(JUNOJUMPIMAGES)} />
                       </div>
                     </Fade>
                   </div>
@@ -115,7 +128,7 @@ export default class Projects extends React.Component {
                     </div>
                     <Fade right>
                       <div className="col-md-6">
-                        <a href="https://github.com/AdamZed/SummNews"><img className="card-image" src={summnews} /></a>
+                        <img className="card-image" src={summnews} onClick={() => this.toggleScaleImage(SUMMNEWSIMAGES)} />
                       </div>
                     </Fade>
                   </div>
@@ -137,7 +150,7 @@ export default class Projects extends React.Component {
                     </div>
                     <Fade right>
                       <div className="col-md-6">
-                        <a href="https://github.com/michaelroudnitski/yuroomie"><img className="card-image" src={yuroomie} /></a>
+                        <img className="card-image" src={yuroomie} onClick={() => this.toggleScaleImage(YUROOMIEIMAGES)} />
                       </div>
                     </Fade>
                   </div>
