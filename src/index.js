@@ -16,7 +16,7 @@ class Index extends React.Component {
       <Router>
         <div className="app">
           <main>
-            <Route exact path="/" component={Projects} />
+            <Route exact path="/" component={Home} />
             <Route path="/home" component={Home} />
             <Route path="/projects" component={Projects} />
           </main>

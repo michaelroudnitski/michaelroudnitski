@@ -9,25 +9,18 @@ import { faEnvelope, faTimes } from '@fortawesome/free-solid-svg-icons'
 
 // Images
 import junojump from '../../../img/junojump/junojump.png';
+import jj1 from '../../../img/junojump/junojump1.png';
+import jj2 from '../../../img/junojump/junojump2.png';
+import jj3 from '../../../img/junojump/junojump3.png';
 import summnews from '../../../img/summnews/summnews.png';
+import sn1 from '../../../img/summnews/summnews1.png'
+import sn2 from '../../../img/summnews/summnews2.png'
 import yuroomie from '../../../img/yuroomie/yuroomie.png';
+import yr1 from '../../../img/yuroomie/yuroomie.jpg';
 
-const JUNOJUMPIMAGES = [
-  '../../../img/junojump/junojump.png',
-  '../../../img/junojump/junojump1.png',
-  '../../../img/junojump/junojump2.png',
-  '../../../img/junojump/junojump3.png'
-]
-
-const SUMMNEWSIMAGES = [
-  '../../../img/summnews/summnews.png',
-  '../../../img/summnews/summnews1.png',
-  '../../../img/summnews/summnews2.png'
-]
-
-const YUROOMIEIMAGES = [
-  '../../../img/yuroomie/yuroomie.jpg'
-]
+const JUNOJUMPIMAGES = [jj1, jj2, jj3, junojump]
+const SUMMNEWSIMAGES = [sn1, sn2, summnews]
+const YUROOMIEIMAGES = [yr1]
 
 export default class Projects extends React.Component {
   constructor(props) {
@@ -40,7 +33,7 @@ export default class Projects extends React.Component {
     this.escapePress = this.escapePress.bind(this);
   }
 
-  toggleScaleImage(images=null) {
+  toggleScaleImage(images = null) {
     this.setState(state => ({
       galleryImages: images ? images : null,
       scaleimage: !state.scaleimage

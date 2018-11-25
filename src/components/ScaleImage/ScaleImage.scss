@@ -6,8 +6,34 @@
   top: 0;
   left: 0;
   background: rgba(0,0,0,0.8);
+  user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
+}
+
+.image-indexer {
+  color: white;
+  position: fixed;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+.image-container {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  max-width: 80%;
+  max-height: 80%;
+  margin: auto;
+  overflow: auto;
   img {
-    position: fixed;
+    position: relative;
     top: 0;
     bottom: 0;
     left: 0;
@@ -19,11 +45,24 @@
   }
 }
 
-.image-indexer {
+#left-arrow {
+  position: relative;
+  height: 100%;
+  font-size: 2.5rem;
   color: white;
-  position: fixed;
-  bottom: 20px;
-  left: 0;
-  right: 0;
-  text-align: center;
+  &:hover {
+    color: rgba(255, 255, 255, 0.8);
+    cursor: pointer;
+  }
+}
+
+#right-arrow {
+  position: relative;
+  height: 100%;
+  font-size: 2.5rem;
+  color: white;
+  &:hover {
+    color: rgba(255, 255, 255, 0.8);
+    cursor: pointer;
+  }
 }
