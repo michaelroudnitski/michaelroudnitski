@@ -10,7 +10,8 @@ export default class ScaleImage extends React.Component {
     if (!props.images) return null;
     this.imageIndex = 0;
     this.state = {
-      image: props.images[0]
+      image: props.images[0],
+      imageStatus: "loading"
     }
     this.arrowPress = this.arrowPress.bind(this);
     this.nextImage = this.nextImage.bind(this);
@@ -20,6 +21,7 @@ export default class ScaleImage extends React.Component {
   nextImage() {
     this.imageIndex++;
     if (this.imageIndex >= this.props.images.length) this.imageIndex = 0;
+    else this.handleImageIncoming();
     this.setState(() => ({
       image: this.props.images[this.imageIndex]
     }))
@@ -28,6 +30,7 @@ export default class ScaleImage extends React.Component {
   previousImage() {
     this.imageIndex--;
     if (this.imageIndex <= -1) this.imageIndex = this.props.images.length - 1;
+    else this.handleImageIncoming();
     this.setState(() => ({
       image: this.props.images[this.imageIndex]
     }))
@@ -41,6 +44,14 @@ export default class ScaleImage extends React.Component {
     }
   }
 
+  handleImageLoaded() {
+    this.setState({ imageStatus: "loaded" });
+  }
+
+  handleImageIncoming() {
+    this.setState({ imageStatus: "loading" });
+  }
+
   componentDidMount() {
     document.addEventListener("keydown", this.arrowPress, false);
     document.documentElement.style.overflow = 'hidden';
@@ -48,7 +59,7 @@ export default class ScaleImage extends React.Component {
   }
   componentWillUnmount() {
     document.removeEventListener("keydown", this.arrowPress, false);
-    document.documentElement.style.overflow = 'scroll';
+    document.documentElement.style.overflow = 'auto';
     document.body.scroll = "yes";
   }
 
@@ -57,9 +68,14 @@ export default class ScaleImage extends React.Component {
       <div>
         <div id="fullscreen">
           <div className="row image-container">
-            <FontAwesomeIcon icon={faCaretLeft} id="left-arrow" onClick={this.previousImage} />
-            <img src={this.state.image} />
-            <FontAwesomeIcon icon={faCaretRight} id="right-arrow" onClick={this.nextImage} />
+            <FontAwesomeIcon icon={faCaretLeft} className="arrow left" onClick={this.previousImage} />
+            {this.state.imageStatus === "loading" && <div className="loader"></div>}
+            <img src={this.state.image} onLoad={this.handleImageLoaded.bind(this)} />
+            <FontAwesomeIcon icon={faCaretRight} className="arrow right" onClick={this.nextImage} />
+          </div>
+          <div className="row navigation-area">
+            <div className="col left" onClick={this.previousImage}></div>
+            <div className="col right" onClick={this.nextImage}></div>
           </div>
           <h3 className="image-indexer">{this.imageIndex + 1}/{this.props.images.length}</h3>
         </div>
