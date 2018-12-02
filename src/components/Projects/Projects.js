@@ -18,8 +18,8 @@ import sn2 from '../../../img/summnews/summnews2.png'
 import yuroomie from '../../../img/yuroomie/yuroomie.png';
 import yr1 from '../../../img/yuroomie/yuroomie.jpg';
 
-const JUNOJUMPIMAGES = [jj1, jj2, jj3, junojump]
-const SUMMNEWSIMAGES = [sn1, sn2, summnews]
+const JUNOJUMPIMAGES = [jj1, jj2, jj3]
+const SUMMNEWSIMAGES = [sn1, sn2]
 const YUROOMIEIMAGES = [yr1]
 
 export default class Projects extends React.Component {
@@ -64,9 +64,9 @@ export default class Projects extends React.Component {
           <div className="nav-content row justify-content-between">
             <Link to="/home"><h3 id="home-button">Home</h3></Link>
             <div className="nav-right">
-              <a href="https://github.com/michaelroudnitski"><FontAwesomeIcon icon={faGithub} /></a>
-              <a href="https://www.linkedin.com/in/michael-roudnitski/"><FontAwesomeIcon icon={faLinkedin} /></a>
-              <a href="mailto:michaelroudnitski@gmail.com"><FontAwesomeIcon icon={faEnvelope} /></a>
+              <a className="dark" href="https://github.com/michaelroudnitski"><FontAwesomeIcon icon={faGithub} /></a>
+              <a className="dark" href="https://www.linkedin.com/in/michael-roudnitski/"><FontAwesomeIcon icon={faLinkedin} /></a>
+              <a className="dark" href="mailto:michaelroudnitski@gmail.com"><FontAwesomeIcon icon={faEnvelope} /></a>
             </div>
           </div>
         </nav>
@@ -79,7 +79,7 @@ export default class Projects extends React.Component {
               <div className="card bg-dark mb-3">
                 <div className="card-header">
                   <h3 className="card-title">
-                    <a href="https://play.google.com/store/apps/details?id=com.MichaelRoudnitski.Slider&hl=en">Juno Jump (2017)</a>
+                    <a className="dark" href="https://play.google.com/store/apps/details?id=com.MichaelRoudnitski.Slider&hl=en">Juno Jump (2017)</a>
                   </h3>
                 </div>
                 <div className="card-body">
@@ -91,7 +91,7 @@ export default class Projects extends React.Component {
                         Users can collect coins to unlock unique trails, compare best scores and achievements with Google Play Services and of course, enjoy the game!
                   </p>
                     </div>
-                    <Fade right>
+                    <Fade>
                       <div className="col-md-6">
                         <img className="card-image" src={junojump} onClick={() => this.toggleScaleImage(JUNOJUMPIMAGES)} />
                       </div>
@@ -103,7 +103,7 @@ export default class Projects extends React.Component {
             <Fade>
               <div className="card bg-dark mb-3">
                 <div className="card-header">
-                  <h3 className="card-title"><a href="https://github.com/AdamZed/SummNews">SummNews (2018)</a></h3>
+                  <h3 className="card-title"><a className="dark" href="https://github.com/AdamZed/SummNews">SummNews (2018)</a></h3>
                 </div>
                 <div className="card-body">
                   <div className="row">
@@ -114,11 +114,11 @@ export default class Projects extends React.Component {
                         the article body and details are sent to Google Firebase and that data is used by the front-end client
                     </p>
                       <p className="card-text">
-                        Me and my friend <a href="https://github.com/AdamZed">Adam Zanon </a>
-                        built SummNews for <a href="https://yorkuhacks.com/">YorkUHacks</a>, a 24 hour hackathon hosted by York University and we won 5th place!
+                        Me and my friend <a className="dark" href="https://github.com/AdamZed">Adam Zanon </a>
+                        built SummNews for <a className="dark" href="https://yorkuhacks.com/">YorkUHacks</a>, a 24 hour hackathon hosted by York University and we won 5th place!
                     </p>
                     </div>
-                    <Fade right>
+                    <Fade>
                       <div className="col-md-6">
                         <img className="card-image" src={summnews} onClick={() => this.toggleScaleImage(SUMMNEWSIMAGES)} />
                       </div>
@@ -131,16 +131,16 @@ export default class Projects extends React.Component {
               <div className="card bg-dark mb-3">
                 <div className="card-header">
                   <h3 className="card-title">
-                    <a href="https://github.com/michaelroudnitski/yuroomie">YURoomie (2018)</a></h3>
+                    <a className="dark" href="https://github.com/michaelroudnitski/yuroomie">YURoomie (2018)</a></h3>
                 </div>
                 <div className="card-body">
                   <div className="row">
                     <div className="col-md-6">
                       <p className="card-text">YURoomie is a web platform built with Django.</p>
                       <p className="card-text">It was designed to help university students find roommates studying at the same school.</p>
-                      <p className="card-text">The project was completed for <a href="http://hackfest.library.yorku.ca/2018/">Steacie Library Hackfest</a> hosted by York University.</p>
+                      <p className="card-text">The project was completed for <a className="dark" href="http://hackfest.library.yorku.ca/2018/">Steacie Library Hackfest</a> hosted by York University.</p>
                     </div>
-                    <Fade right>
+                    <Fade>
                       <div className="col-md-6">
                         <img className="card-image" src={yuroomie} onClick={() => this.toggleScaleImage(YUROOMIEIMAGES)} />
                       </div>
@@ -150,7 +150,6 @@ export default class Projects extends React.Component {
               </div>
             </Fade>
           </div>
-          <h1 className="section-header">More</h1>
         </div>
       </div>
     )

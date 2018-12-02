@@ -12,7 +12,7 @@ body {
   color: $black;
 }
 
-a:hover {
+a.dark:hover {
   color: $black;
 }
 
@@ -40,7 +40,7 @@ a:hover {
   padding: 10px;
   top: 0;
   width: 100%;
-  background-color: $black;
+  background-color: rgb(38, 38, 38);
   a:hover {
     color: $secondary-color;
   }
