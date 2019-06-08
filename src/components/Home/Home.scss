@@ -1,6 +1,6 @@
 $primary-color: rgb(255, 87, 51);
 $secondary-color: wheat;
-$black: rgba(0,0,0,0.8);
+$black: rgba(0, 0, 0, 0.8);
 
 $breakpoint-mobile: 768px;
 
@@ -14,13 +14,13 @@ $breakpoint-mobile: 768px;
 }
 
 .pre-name {
-  font-family: 'Comfortaa', Arial, Helvetica, sans-serif;
+  font-family: "Comfortaa", Arial, Helvetica, sans-serif;
   font-size: 46pt;
   color: wheat;
 }
 
 .name-title {
-  font-family: 'Comfortaa', Arial, Helvetica, sans-serif;
+  font-family: "Comfortaa", Arial, Helvetica, sans-serif;
   color: $primary-color;
   font-size: 60pt;
   font-weight: 600;
@@ -29,7 +29,7 @@ $breakpoint-mobile: 768px;
 }
 
 .name-subtitle {
-  font-family: 'Comfortaa', Arial, Helvetica, sans-serif;
+  font-family: "Comfortaa", Arial, Helvetica, sans-serif;
   font-size: 1.2rem;
   margin-top: 10vh;
 }
@@ -148,21 +148,26 @@ a {
 // viewing on large device
 @media (min-width: $breakpoint-mobile) {
   .box-1 {
+    position: fixed;
+    width: 66%;
     background: url("../../../img/city.jpg");
     background-size: auto 100%;
     background-position: center;
   }
 
-  .full-height {
-    overflow: hidden;
-  }
+  section.content {
+    position: absolute;
+    width: 34%;
+    top: 0;
+    right: 0;
+    
+    .box-2 {
+      height: 50%;
+    }
 
-  .box-2 {
-    height: 50%;
-  }
-
-  .box-3 {
-    height: 50%;
+    .box-3 {
+      height: 50%;
+    }
   }
 }
 
@@ -175,11 +180,11 @@ a {
   #projects-button {
     background: $primary-color;
     border: none;
-    position: absolute; 
-    left: 0; 
-    right: 0; 
-    margin-left: auto; 
-    margin-right: auto; 
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
     width: 50%;
     h1 {
       color: $secondary-color;
@@ -196,7 +201,7 @@ a {
   .full-height {
     overflow-x: hidden;
   }
-  
+
   .name-title {
     font-size: 40pt;
   }

@@ -2,7 +2,8 @@ const HtmlWebPackPlugin = require("html-webpack-plugin");
 
 const htmlWebpackPlugin = new HtmlWebPackPlugin({
   template: "./src/index.html",
-  filename: "./index.html"
+  filename: "./index.html",
+  favicon: "./dist/favicon-32x32.png"
 });
 
 module.exports = {
@@ -20,9 +21,9 @@ module.exports = {
         use: {
           loader: "url-loader",
           options: {
-            limit: 25000,
-          },
-        },
+            limit: 25000
+          }
+        }
       },
       {
         test: /\.css$/,
