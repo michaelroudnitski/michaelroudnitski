@@ -50,6 +50,7 @@ $breakpoint-mobile: 768px;
   box-shadow: -5px -5px 20px rgba(0, 0, 0, 0.1);
   background: rgba(0, 0, 0, 0.9);
   z-index: 200;
+
   &::after {
     background: url("../../../img/user-regular.svg");
     content: "";
@@ -68,6 +69,7 @@ $breakpoint-mobile: 768px;
   box-shadow: -5px -5px 20px rgba(0, 0, 0, 0.1);
   background: rgba(0, 0, 0, 0.92);
   z-index: 300;
+
   &::after {
     background: url("../../../img/code-solid.svg");
     content: "";
@@ -86,16 +88,20 @@ $breakpoint-mobile: 768px;
   background: none;
   border: 5px $primary-color solid;
   display: inline-block;
+
   h1 {
     transition: color 0.3s ease;
     color: $primary-color;
   }
+
   &:hover {
     h1 {
       color: $secondary-color;
     }
+
     border: 5px $secondary-color solid;
   }
+
   position: absolute;
   top: 50%;
 }
@@ -103,6 +109,7 @@ $breakpoint-mobile: 768px;
 a {
   color: $primary-color;
   transition: color 0.3s ease;
+
   &:hover {
     color: $secondary-color;
   }
@@ -111,6 +118,7 @@ a {
 .contact-icon-container {
   position: absolute;
   bottom: 6%;
+
   a {
     font-size: 25pt;
     padding: 0 15px;
@@ -140,6 +148,11 @@ a {
 .align-items-center {
   text-align: center;
   font-size: 50pt;
+
+  svg {
+    transition: color 0.1s ease;
+  }
+
   svg:hover {
     color: $primary-color;
   }
@@ -186,6 +199,7 @@ a {
     margin-left: auto;
     margin-right: auto;
     width: 50%;
+
     h1 {
       color: $secondary-color;
       font-size: 2rem;

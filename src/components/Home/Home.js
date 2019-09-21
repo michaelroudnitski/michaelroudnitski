@@ -1,34 +1,37 @@
 import React from "react";
-import Fade from "react-reveal/Fade";
+import Slide from "react-reveal/Slide";
 import Typist from "react-typist";
-import style from "./Home.scss";
+import "./Home.scss";
 import { BrowserRouter as Router, Link } from "react-router-dom";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faGithub,
-  faLinkedin,
-  faJs,
-  faJava,
-  faPython,
-  faHtml5,
-  faCss3,
-  faReact,
-  faGit,
-  faAndroid,
-  faAngular
-} from "@fortawesome/free-brands-svg-icons";
+import iconMap from "./iconMap";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
 export default class Home extends React.Component {
   constructor(props) {
     super(props);
     this.state = { skill: "Skills" };
     this.highlightSkill = this.highlightSkill.bind(this);
+    this.Skill = this.Skill.bind(this);
   }
 
   highlightSkill(skill) {
     this.setState(state => ({ skill }));
+  }
+
+  Skill(props) {
+    return (
+      <div className="col">
+        <FontAwesomeIcon
+          icon={iconMap[props.name]}
+          title={props.name}
+          onMouseEnter={() => this.highlightSkill(props.name)}
+          onMouseLeave={() => this.highlightSkill("Skills")}
+        />
+      </div>
+    );
   }
 
   render() {
@@ -68,90 +71,35 @@ export default class Home extends React.Component {
               <h1 className="row justify-content-center">About Me</h1>
               <br />
               <p className="row justify-content-md-center">
-                I'm in my 3rd year of Computer Science at York University in
-                Toronto, Canada and expect to graduate in 2021.
+                I'm 3 years into my study of Computer Science at York University
+                in Toronto, Canada and expect to graduate in 2021 with honors.
               </p>
               <p className="row justify-content-md-center inline">
-                When I'm not studying I'm building beautiful and intuitive web
-                interfaces as well as scalable back end cloud solutions for{" "}
+                I've spent 2 summers as a fullstack web developer at{" "}
                 <a href="https://www.completelymanaged.com/" className="inline">
-                  Completely Managed.
-                </a>
+                  Completely Managed
+                </a>{" "}
+                where I worked on the LANAWARE Cloud platform.
               </p>
             </div>
-            <div
-              className="box box-3 col"
-              onMouseLeave={() => this.highlightSkill("Skills")}
-            >
-              <h1 className="row justify-content-center">{this.state.skill}</h1>
+            <div className="box box-3 col">
+              <h1 className="row justify-content-center">
+                <Slide right>{this.state.skill}</Slide>
+              </h1>
               <div className="row align-items-center">
-                <div className="col">
-                  <FontAwesomeIcon
-                    icon={faJs}
-                    title="JavaScript"
-                    onMouseEnter={() => this.highlightSkill("JavaScript")}
-                  />
-                </div>
-                <div className="col">
-                  <FontAwesomeIcon
-                    icon={faPython}
-                    title="Python"
-                    onMouseEnter={() => this.highlightSkill("Python")}
-                  />
-                </div>
-                <div className="col">
-                  <FontAwesomeIcon
-                    icon={faJava}
-                    title="Java"
-                    onMouseEnter={() => this.highlightSkill("Java")}
-                  />
-                </div>
+                <this.Skill name="JavaScript" />
+                <this.Skill name="Python" />
+                <this.Skill name="Java" />
               </div>
               <div className="row align-items-center">
-                <div className="col">
-                  <FontAwesomeIcon
-                    icon={faGit}
-                    title="Git"
-                    onMouseEnter={() => this.highlightSkill("Git")}
-                  />
-                </div>
-                <div className="col">
-                  <FontAwesomeIcon
-                    icon={faHtml5}
-                    title="HTML5"
-                    onMouseEnter={() => this.highlightSkill("HTML5")}
-                  />
-                </div>
-                <div className="col">
-                  <FontAwesomeIcon
-                    icon={faCss3}
-                    title="CSS3"
-                    onMouseEnter={() => this.highlightSkill("CSS3")}
-                  />
-                </div>
+                <this.Skill name="Git" />
+                <this.Skill name="Docker" />
+                <this.Skill name="Angular" />
               </div>
               <div className="row align-items-center">
-                <div className="col">
-                  <FontAwesomeIcon
-                    icon={faAngular}
-                    title="faAngular"
-                    onMouseEnter={() => this.highlightSkill("Angular")}
-                  />
-                </div>
-                <div className="col">
-                  <FontAwesomeIcon
-                    icon={faReact}
-                    title="NodeJS"
-                    onMouseEnter={() => this.highlightSkill("React")}
-                  />
-                </div>
-                <div className="col">
-                  <FontAwesomeIcon
-                    icon={faAndroid}
-                    title="Android"
-                    onMouseEnter={() => this.highlightSkill("Android")}
-                  />
-                </div>
+                <this.Skill name="React" />
+                <this.Skill name="Flutter" />
+                <this.Skill name="Databases" />
               </div>
             </div>
           </section>
