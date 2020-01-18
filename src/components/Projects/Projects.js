@@ -8,6 +8,12 @@ import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope, faTimes } from "@fortawesome/free-solid-svg-icons";
 
 // Images
+import tabs from "../../../img/tabs.png";
+import t1 from "../../../img/tabs/s1.png";
+import t2 from "../../../img/tabs/s2.png";
+import t3 from "../../../img/tabs/s3.png";
+import t4 from "../../../img/tabs/s4.png";
+import t5 from "../../../img/tabs/s5.png";
 import junojump from "../../../img/junojump/junojump.png";
 import jj1 from "../../../img/junojump/junojump1.png";
 import jj2 from "../../../img/junojump/junojump2.png";
@@ -18,6 +24,7 @@ import sn2 from "../../../img/summnews/summnews2.png";
 import yuroomie from "../../../img/yuroomie/yuroomie.png";
 import yr1 from "../../../img/yuroomie/yuroomie.jpg";
 
+const TABSIMAGES = [t1, t2, t3, t4, t5];
 const JUNOJUMPIMAGES = [jj1, jj2, jj3];
 const SUMMNEWSIMAGES = [sn1, sn2];
 const YUROOMIEIMAGES = [yr1];
@@ -71,7 +78,7 @@ export default class Projects extends React.Component {
         <nav className="nav-bar">
           <div className="nav-content row justify-content-between">
             <Link to="/home">
-              <h3 id="home-button">Home</h3>
+              <h3 id="home-button">Michael Roudnitski</h3>
             </Link>
             <div className="nav-right">
               <a className="dark" href="https://github.com/michaelroudnitski">
@@ -100,7 +107,7 @@ export default class Projects extends React.Component {
                   <h3 className="card-title">
                     <div className="row justify-content-between">
                       <a className="dark" href="#">
-                        Tabs (2019) - coming soon
+                        Tabs (2020) - coming soon
                       </a>
                       <Link to="/tabs-policy">Privacy Policy</Link>
                     </div>
@@ -114,9 +121,18 @@ export default class Projects extends React.Component {
                         If you often split bills, groceries or even bet with
                         friends -- Tabs is the app for you.
                       </p>
+                      <p className="card-text">
+                        Coming soon to iOS and Android
+                      </p>
                     </div>
                     <Fade>
-                      <div className="col-md-6"></div>
+                      <div className="col-md-6">
+                        <img
+                          className="card-image"
+                          src={tabs}
+                          onClick={() => this.toggleScaleImage(TABSIMAGES)}
+                        />
+                      </div>
                     </Fade>
                   </div>
                 </div>
