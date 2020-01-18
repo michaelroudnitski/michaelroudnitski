@@ -98,6 +98,34 @@ export default class Projects extends React.Component {
               <div className="card bg-dark mb-3">
                 <div className="card-header">
                   <h3 className="card-title">
+                    <div className="row justify-content-between">
+                      <a className="dark" href="#">
+                        Tabs (2019) - coming soon
+                      </a>
+                      <Link to="/tabs-policy">Privacy Policy</Link>
+                    </div>
+                  </h3>
+                </div>
+                <div className="card-body">
+                  <div className="row">
+                    <div className="col-md-6">
+                      <p className="card-text">The expense sharing app.</p>
+                      <p className="card-text">
+                        If you often split bills, groceries or even bet with
+                        friends -- Tabs is the app for you.
+                      </p>
+                    </div>
+                    <Fade>
+                      <div className="col-md-6"></div>
+                    </Fade>
+                  </div>
+                </div>
+              </div>
+            </Fade>
+            <Fade>
+              <div className="card bg-dark mb-3">
+                <div className="card-header">
+                  <h3 className="card-title">
                     <a
                       className="dark"
                       href="https://play.google.com/store/apps/details?id=com.MichaelRoudnitski.Slider&hl=en"
