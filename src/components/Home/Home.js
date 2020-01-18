@@ -40,18 +40,24 @@ export default class Home extends React.Component {
         <div className="row no-margin full-height">
           <div className="box-1 col-12 col-md-8">
             <div>
-              <h1 className="pre-name">Hi, my name is</h1>
-              <h1 className="name-title">
-                <Typist startDelay={1000} cursor={{ show: false }}>
+              <h1 className="name">
+                Hi, my name is
+                <Typist
+                  startDelay={1000}
+                  cursor={{ hideWhenDone: true, show: true }}
+                >
                   <span>Slim Shady</span>
                   <Typist.Backspace count={10} delay={200} />
                   <span>Michael Roudnitski</span>
                 </Typist>
               </h1>
+              {/* <h1 className="name-title">
+                
+              </h1> */}
             </div>
             <Link to="/projects">
               <button className="btn btn-primary" id="projects-button">
-                <h1>Projects</h1>
+                <h1>My Projects</h1>
               </button>
             </Link>
             <div className="contact-icon-container">
@@ -76,16 +82,17 @@ export default class Home extends React.Component {
               </p>
               <p className="row justify-content-md-center inline">
                 I've spent 2 summers as a fullstack web developer at{" "}
-                <a href="https://www.completelymanaged.com/" className="inline">
+                <a
+                  href="https://www.completelymanaged.com/"
+                  className="inline primary-important"
+                >
                   Completely Managed
                 </a>{" "}
                 where I worked on the LANAWARE Cloud platform.
               </p>
             </div>
             <div className="box box-3 col">
-              <h1 className="row justify-content-center">
-                <Slide right>{this.state.skill}</Slide>
-              </h1>
+              <h1 className="row justify-content-center">{this.state.skill}</h1>
               <div className="row align-items-center">
                 <this.Skill name="JavaScript" />
                 <this.Skill name="Python" />
