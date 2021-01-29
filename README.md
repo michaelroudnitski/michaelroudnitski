@@ -3,8 +3,12 @@
 ## I'm a student/intern/app developer!
 - 💼 Currently interning at IBM as a full stack developer intern
 - 🎓 Studying CS at York University
-- 🌱 Learning Ruby on Rails, Elixir/Phoenix, Python/Django and more
+- 🌱 Learning Ruby on Rails, Elixir/Phoenix, Python/Django and Kubernetes
 - 📱 Creator of [Tabs](https://www.tabsapp.co/)
+
+### 📕 Blogs
+- https://dev.to/mroudnitski
+- https://mroudnitski.com/blog
 
 ### Connect with me:
 [<img align="left" alt="codeSTACKr.com" width="22px" src="https://raw.githubusercontent.com/iconic/open-iconic/master/svg/globe.svg" />](https://www.mroudnitski.com/)
@@ -13,5 +17,3 @@
 
 <br />
 <br />
-
-### 📕 [Blog posts](https://www.mroudnitski.com/blog)
