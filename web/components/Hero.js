@@ -14,13 +14,18 @@ export default function Hero() {
       className={`${
         toggle
           ? "bg-red-500 dark:bg-gray-900 dark:text-gray-200"
-          : "bg-purple-500 dark:bg-gray-700 dark:text-blue-200"
+          : "bg-purple-500 dark:bg-gray-900 dark:text-blue-200"
       } transition-colors overflow-hidden w-full`}
     >
-      <div className="relative z-10">
-        <div className="relative px-4 sm:px-6 lg:px-8 pb-12 pt-20 lg:pb-24 lg:pt-24">
+      <div className="flex flex-col sm:flex-row justify-between relative z-10 px-4 sm:px-6 lg:px-8 pb-12 pt-8 sm:pt-20 lg:pb-24 lg:pt-24">
+        <div className="relative">
+          <img
+            className="rounded-full dark:opacity-75 h-20"
+            src="/mroudnitski.jpeg"
+            alt="Illustration of Michael Roudnitski"
+          />
           <h1 className="pt-4 sm:text-5xl">
-            <div className="overflow-hidden h-12 relative">
+            <div className="overflow-hidden h-10 relative">
               <Title
                 fontClass="font-display text-2xl tracking-hero"
                 show={toggle}
@@ -57,11 +62,13 @@ export default function Hero() {
               />
             </div>
           </h1>
-          <p className="max-w-lg my-2 text-xl text-opacity-90 sm:mt-6 sm:mb-2">
+          <p className="max-w-lg my-2 text-xl text-opacity-90 mt-4 sm:mt-6 sm:mb-2">
             Software Engineer | Toronto, Canada 🇨🇦
           </p>
-          <div className="flex"></div>
+          <div className="flex">TODO: Add social media links</div>
         </div>
+
+        <div>TODO: Latest blog post from dev.to</div>
       </div>
     </div>
   );
