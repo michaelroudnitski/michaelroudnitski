@@ -11,10 +11,10 @@ export default function Blog() {
 
   return (
     <div className="divide-y-2 divide-gray-500">
-      <h2 className="text-xl tracking-tight font-extrabold dark:text-gray-400 text-gray-900 sm:text-4xl">
+      <h2 className="text-xl tracking-tight font-extrabold dark:text-gray-300 text-gray-900 sm:text-4xl">
         Recent posts
       </h2>
-      <div className="mt-4 pt-8 grid gap-16 lg:grid-cols-3 lg:gap-x-5 lg:gap-y-12">
+      <div className="mt-4 pt-4 grid gap-16 lg:grid-cols-3 lg:gap-x-5 lg:gap-y-12">
         {posts.map((post) => {
           return (
             <div key={post.title}>

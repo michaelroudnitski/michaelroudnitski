@@ -21,7 +21,7 @@ export default function Hero() {
           : "bg-purple-500 dark:bg-gray-900 dark:text-white"
       } transition-colors overflow-hidden w-full`}
     >
-      <div className="max-w-7xl mx-auto py-12 space-y-12 z-10 px-4 sm:px-6 lg:px-8 pb-12 pt-8 sm:pt-20 lg:pb-24">
+      <div className="max-w-7xl mx-auto py-12 space-y-12 md:space-y-24 z-10 px-4 sm:px-6 lg:px-8 pb-12 pt-8 sm:pt-20 lg:pb-24">
         <div className="relative">
           <h1 className="pt-4 sm:text-5xl">
             <div className="overflow-hidden h-10 relative">
@@ -61,14 +61,16 @@ export default function Hero() {
               />
             </div>
           </h1>
-          <p className="max-w-lg my-2 text-xl text-opacity-90 mt-4 sm:mt-6 sm:mb-2">
-            Software Engineer | Toronto 🇨🇦
+          <p className="text-xl text-opacity-90 mt-4 sm:mb-2 dark:text-gray-400">
+            Software Engineer | Toronto, Canada
           </p>
-          <div className="flex space-x-4 md:order-2">
+          <div className="mt-4 flex space-x-4 md:order-2">
             <Socials />
           </div>
         </div>
-        <Blog />
+        <div className="mt-24">
+          <Blog />
+        </div>
       </div>
     </div>
   );
