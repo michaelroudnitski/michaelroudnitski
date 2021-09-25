@@ -2,6 +2,7 @@ import Head from "next/head";
 
 /* Components */
 import Hero from "/components/Hero";
+import Footer from "/components/Footer";
 
 export default function Home() {
   return (
@@ -30,9 +31,7 @@ export default function Home() {
         <Hero />
       </main>
 
-      <footer className="flex items-center justify-center w-full h-24 border-t">
-        todo
-      </footer>
+      <Footer />
     </div>
   );
 }

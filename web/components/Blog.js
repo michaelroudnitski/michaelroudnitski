@@ -10,19 +10,23 @@ export default function Blog() {
   }, []);
 
   return (
-    <div className="divide-y-2 divide-gray-200">
-      <h2 className="text-3xl tracking-tight font-extrabold dark:text-gray-200 text-gray-900 sm:text-4xl">
+    <div className="divide-y-2 divide-gray-500">
+      <h2 className="text-xl tracking-tight font-extrabold dark:text-gray-400 text-gray-900 sm:text-4xl">
         Recent posts
       </h2>
       <div className="mt-4 pt-8 grid gap-16 lg:grid-cols-3 lg:gap-x-5 lg:gap-y-12">
         {posts.map((post) => {
           return (
             <div key={post.title}>
-              <a href={post.url} target="_blank" className="block mt-4">
-                <p className="text-xl font-semibold dark:text-gray-100 text-gray-900">
+              <a
+                href={post.url}
+                target="_blank"
+                className="block mt-4 group transition-colors"
+              >
+                <p className="text-xl font-semibold dark:text-gray-400 dark:group-hover:text-gray-200 text-gray-900">
                   {post.title}
                 </p>
-                <p className="mt-3 text-base text-gray-500">
+                <p className="mt-3 text-base dark:text-gray-500 dark:group-hover:text-gray-400">
                   {post.description}
                 </p>
               </a>
