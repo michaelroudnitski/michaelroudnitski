@@ -1,5 +1,8 @@
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect } from "react";
 import { Transition } from "@headlessui/react";
+
+/* Components */
+import Blog from "./Blog";
 
 export default function Hero() {
   const [toggle, setToggle] = useState(true);
@@ -17,13 +20,8 @@ export default function Hero() {
           : "bg-purple-500 dark:bg-gray-900 dark:text-blue-200"
       } transition-colors overflow-hidden w-full`}
     >
-      <div className="flex flex-col sm:flex-row justify-between relative z-10 px-4 sm:px-6 lg:px-8 pb-12 pt-8 sm:pt-20 lg:pb-24 lg:pt-24">
+      <div className="space-y-12 z-10 px-4 sm:px-6 lg:px-8 pb-12 pt-8 sm:pt-20 lg:pb-24 lg:pt-24">
         <div className="relative">
-          <img
-            className="rounded-full dark:opacity-75 h-20"
-            src="/mroudnitski.jpeg"
-            alt="Illustration of Michael Roudnitski"
-          />
           <h1 className="pt-4 sm:text-5xl">
             <div className="overflow-hidden h-10 relative">
               <Title
@@ -57,7 +55,7 @@ export default function Hero() {
               />
               <Title
                 show={!toggle}
-                text="w/ Software"
+                text="& Software"
                 fontClass="text-5xl font-display font-bold tracking-hero"
               />
             </div>
@@ -67,8 +65,7 @@ export default function Hero() {
           </p>
           <div className="flex">TODO: Add social media links</div>
         </div>
-
-        <div>TODO: Latest blog post from dev.to</div>
+        <Blog />
       </div>
     </div>
   );
