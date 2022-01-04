@@ -1,8 +1,8 @@
 ### Hey, I'm [Michael](https://www.mroudnitski.com/) 👋
 
-## I'm a student/intern/app developer!
-- 💼 Currently interning at IBM as a full stack developer intern
-- 🎓 Studying CS at York University
+## I make apps!
+- 💼 Currently at IBM as a full stack developer
+- 🎓 CS degree from York University
 - 🌱 Learning Ruby on Rails, Elixir/Phoenix, Python/Django and Kubernetes
 - 📱 Creator of [Tabs](https://www.tabsapp.co/)
 
